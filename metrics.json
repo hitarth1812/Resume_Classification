@@ -1,0 +1,77 @@
+{
+  "test": [
+    {
+      "model": "Ensemble BiMamba + TF-IDF",
+      "accuracy": 0.8632707774798928,
+      "macro_precision": 0.8331524160036157,
+      "macro_recall": 0.8444794584500466,
+      "macro_f1": 0.8296139113737798,
+      "weighted_f1": 0.8570962909638943
+    },
+    {
+      "model": "BiMamba (Word2Vec init)",
+      "accuracy": 0.8632707774798928,
+      "macro_precision": 0.8331524160036157,
+      "macro_recall": 0.8444794584500466,
+      "macro_f1": 0.8296139113737798,
+      "weighted_f1": 0.8570962909638943
+    },
+    {
+      "model": "BiGRU (Word2Vec init)",
+      "accuracy": 0.8659517426273459,
+      "macro_precision": 0.8248140554835602,
+      "macro_recall": 0.8349308473389355,
+      "macro_f1": 0.8211746860664206,
+      "weighted_f1": 0.8603466512266607
+    },
+    {
+      "model": "TF-IDF + Linear SVM",
+      "accuracy": 0.6675603217158177,
+      "macro_precision": 0.6670658940231308,
+      "macro_recall": 0.6356301548397136,
+      "macro_f1": 0.6237950795907924,
+      "weighted_f1": 0.6433609378106002
+    },
+    {
+      "model": "TF-IDF + Logistic Regression",
+      "accuracy": 0.6327077747989276,
+      "macro_precision": 0.6564480374900618,
+      "macro_recall": 0.605265231092437,
+      "macro_f1": 0.6013998481261066,
+      "weighted_f1": 0.6144746521239284
+    },
+    {
+      "model": "TF-IDF + Complement NB",
+      "accuracy": 0.5951742627345844,
+      "macro_precision": 0.57483448944846,
+      "macro_recall": 0.5609943977591035,
+      "macro_f1": 0.5350022329124192,
+      "weighted_f1": 0.5585280607323516
+    },
+    {
+      "model": "Word2Vec-mean + Dense",
+      "accuracy": 0.5388739946380697,
+      "macro_precision": 0.5650063705501013,
+      "macro_recall": 0.5182875233426705,
+      "macro_f1": 0.5162754335207883,
+      "weighted_f1": 0.5271875524261747
+    }
+  ],
+  "preprocessing_ablation": [
+    {
+      "preprocessing": "clean + stopwords removed",
+      "val_macro_f1": 0.6082909066479932,
+      "val_accuracy": 0.6559139784946236
+    },
+    {
+      "preprocessing": "clean + stopwords + stemming",
+      "val_macro_f1": 0.5969172979962881,
+      "val_accuracy": 0.6370967741935484
+    },
+    {
+      "preprocessing": "clean only",
+      "val_macro_f1": 0.5875538874924923,
+      "val_accuracy": 0.6344086021505376
+    }
+  ]
+}

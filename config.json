@@ -1,0 +1,51 @@
+{
+  "labels": [
+    "ACCOUNTANT",
+    "ADVOCATE",
+    "AGRICULTURE",
+    "APPAREL",
+    "ARTS",
+    "AUTOMOBILE",
+    "AVIATION",
+    "BANKING",
+    "BPO",
+    "BUSINESS-DEVELOPMENT",
+    "CHEF",
+    "CONSTRUCTION",
+    "CONSULTANT",
+    "DESIGNER",
+    "DIGITAL-MEDIA",
+    "ENGINEERING",
+    "FINANCE",
+    "FITNESS",
+    "HEALTHCARE",
+    "HR",
+    "INFORMATION-TECHNOLOGY",
+    "PUBLIC-RELATIONS",
+    "SALES",
+    "TEACHER"
+  ],
+  "preprocess": {
+    "remove_stopwords": true,
+    "stem": false
+  },
+  "max_len": 512,
+  "bimamba": {
+    "embed_dim": 128,
+    "d_model": 128,
+    "n_layers": 2,
+    "d_state": 16,
+    "d_conv": 4,
+    "expand": 2,
+    "dropout": 0.2,
+    "emb_dropout": 0.1
+  },
+  "ensemble_weight": 1.0,
+  "seed": 42,
+  "dataset": {
+    "source": "Resume.csv + 2484 PDFs mapped by ID, text = pdf, label = CSV category",
+    "n_train": 1736,
+    "n_val": 372,
+    "n_test": 373
+  }
+}
