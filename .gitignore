@@ -26,3 +26,18 @@ env/
 *.log
 .DS_Store
 
+# Next.js / Node dependencies and build output
+node_modules/
+.next/
+out/
+.turbo/
+.vercel/
+coverage/
+test-results/
+playwright-report/
+blob-report/
+next-env.d.ts
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+.venv312/
+
